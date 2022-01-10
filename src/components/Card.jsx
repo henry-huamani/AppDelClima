@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Card(props) {
   // acá va tu código
@@ -23,3 +24,12 @@ export default function Card(props) {
     </div>
     )
 };
+
+// Buena practica de desarrollo utilizado en trabajo real, para controlar los tipos de datos que recibimos por argumento para el componente
+Card.propTypes = {
+  max: PropTypes.number,
+  min: PropTypes.number,
+  name: PropTypes.string,
+  img: PropTypes.string,
+  onClose: PropTypes.func
+}
