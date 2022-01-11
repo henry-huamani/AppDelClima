@@ -4,11 +4,12 @@ import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
 import data, { Cairns } from './data.js';
+import styles from './components/App2.module.css'
 
 function App() {
   return (
     <div className="App">
-      <div>
+      <div className={styles.contenedorCard}>
         <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
@@ -18,7 +19,7 @@ function App() {
         />
       </div>
       <hr />
-      <div>
+      <div className={styles.contenedor}>
         <Cards
           cities={data}
         />
